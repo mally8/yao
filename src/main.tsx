@@ -20,6 +20,7 @@ const router = createRouter({
 		window.location.href = '/';
 		return null;
 	},
+	basepath: process.env.NODE_ENV === 'production' ? 'yao' : '/',
 });
 
 // Register the router instance for type safety
