@@ -1,10 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  release:
+    types: [published]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -56,12 +54,9 @@ jobs:
         
     - name: ✅ Build summary
       run: |
-        echo "🎉 Build completed for ${{ github.ref_name }}"
-        if [[ ${{ github.ref }} == refs/tags/* ]]; then
-          echo "📦 Release tag: ${{ github.ref_name }}"
-        else
-          echo "🌿 Branch: ${{ github.ref_name }}"
-        fi
+        echo "🎉 Build completed for release ${{ github.event.release.tag_name }}"
+        echo "📦 Release name: ${{ github.event.release.name }}"
+        echo "🏷️ Tag: ${{ github.event.release.tag_name }}"
 
   deploy:
     environment:
@@ -78,6 +73,5 @@ jobs:
         run: |
           echo "🌐 Deployed successfully to: ${{ steps.deployment.outputs.page_url }}"
           echo "📅 Deployment time: $(date)"
-          if [[ ${{ github.ref }} == refs/tags/* ]]; then
-            echo "🏷️ Tag deployed: ${{ github.ref_name }}"
-          fi
+          echo "🏷️ Release deployed: ${{ github.event.release.tag_name }}"
+          echo "📝 Release notes: ${{ github.event.release.body }}"
