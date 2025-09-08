@@ -12,6 +12,7 @@ I have not tested how it works in ACT's OverlayPlugin but if the above link does
 
 ## Settings
 ![Settings Picture](/assets/setting.png)
+
 Click on the "YAO" element show the settings.
 1. Colors: Class based or Role based.
 2. Formatted Nums: Format numbers and abbreviate them to something like 32,2k (not implemented yet).
