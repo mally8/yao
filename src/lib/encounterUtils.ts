@@ -18,7 +18,7 @@ const jobColors: Record<string, JobColorInfo> = {
 	mnk: { roleColor: roleColor.melee, classColor: '#cca567' },
 	sam: { roleColor: roleColor.melee, classColor: '#ea916d' },
 	rpr: { roleColor: roleColor.melee, classColor: '#ac6ea5' },
-	vpr: { roleColor: roleColor.melee, classColor: '#5aa96b' },
+	vpr: { roleColor: roleColor.melee, classColor: '#588a61' },
 	brd: { roleColor: roleColor.ranged, classColor: '#a8d887' },
 	mch: { roleColor: roleColor.ranged, classColor: '#55dac5' },
 	dnc: { roleColor: roleColor.ranged, classColor: '#e2b0af' },
