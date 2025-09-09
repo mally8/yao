@@ -29,7 +29,7 @@ function App() {
 	}, [parseEncounter, parseCombatants]);
 
 	return (
-		<main className="w-screen max-w-screen h-dvh max-h-dvh overflow-x-hidden font-Shantell font-bold">
+		<main className="w-screen max-w-screen h-dvh max-h-dvh overflow-x-hidden font-Shantell font-bold ">
 			<Encounter />
 		</main>
 	);
