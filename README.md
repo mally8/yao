@@ -8,7 +8,12 @@ Create a new profile in Browsingway and add;
 If that doesn't show any data then make sure the websocket address is the same as whats written in IINACT.
 
 ### Usage on ACT.
-I have not tested how it works in ACT's OverlayPlugin but if the above link doesn't work maybe just using `https://mally8.github.io/yao/` works.
+Inside OverlayPlugin settings:
+1. Click on New.
+2. Select Custom present and type MiniParse.
+3. Put `https://mally8.github.io/yao/` inside the URL input.
+
+If you want to adjust the size easily then check on Force White background.
 
 ## Settings
 ![Settings Picture](/assets/setting.png)
