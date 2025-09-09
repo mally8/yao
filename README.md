@@ -1,4 +1,4 @@
-[YAO Showcase](/assets/yao-showcase.png)
+![YAO Showcase](/assets/yao-showcase.png)
 # YAO
 A simple ACT/IINACT overlay inspired by a LMeter profile preset with a few adjustments UI wise.
 
@@ -11,9 +11,11 @@ If that doesn't show any data then make sure the websocket address is the same a
 I have not tested how it works in ACT's OverlayPlugin but if the above link doesn't work maybe just using `https://mally8.github.io/yao/` works.
 
 ## Settings
-[Settings Picture](/assets/setting.png)
+![Settings Picture](/assets/setting.png)
+
+Click on the "YAO" element show the settings.
 1. Colors: Class based or Role based.
-2. Formatted Nums: Format numbers and abbreviate them to something like 32,2k (not implemented yet).
+2. Formatted Nums: Format numbers and abbreviate them to something like 32,2k (does not work rn).
 3. Show Fake Data: will show a fake 8 man encounter to help you setup the overlay how you like it!
 
 Features I might implement later:
