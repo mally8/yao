@@ -15,7 +15,7 @@ I have not tested how it works in ACT's OverlayPlugin but if the above link does
 
 Click on the "YAO" element show the settings.
 1. Colors: Class based or Role based.
-2. Formatted Nums: Format numbers and abbreviate them to something like 32,2k (not implemented yet).
+2. Formatted Nums: Format numbers and abbreviate them to something like 32,2k (does not work rn).
 3. Show Fake Data: will show a fake 8 man encounter to help you setup the overlay how you like it!
 
 Features I might implement later:
