@@ -17,18 +17,8 @@ export default function EncounterView({
 	const settings = useAtomValue(settingsStore);
 
 	return (
-		<div
-			className="px-0.5 w-full h-full overflow-y-auto"
-			style={{
-				scrollbarWidth: 'none',
-			}}
-		>
-			<div
-				className="overflow-x-hidden"
-				style={{
-					scrollbarWidth: 'none',
-				}}
-			>
+		<div className="remove-scrollbar px-0.5 w-full h-full overflow-y-auto">
+			<div className="remove-scrollbar overflow-x-hidden">
 				<EncounterHeader encounter={encounter} />
 				<ul className="flex flex-col text-base">
 					{combatants?.map((c) => {
