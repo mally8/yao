@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import "tailwindcss"; */
 
 /* biome-ignore lint/suspicious/noUnknownAtRules: <Tailwind> */
-@theme {
+/* @theme {
     --font-Shantell: "Shantell Sans", cursive;
     --color-bg: #d0d0d0;
     --color-border: #7c808d;
     --color-border-muted: #9a9eab;
     --color-text: #292929;
     --color-text-muted: #444753;
-}
+} */
 
 .text-outline {
     text-shadow:
@@ -25,4 +28,13 @@
     /* Optional: for crisper text on some browsers */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.remove-scrollbar {
+    scrollbar-width: none;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }

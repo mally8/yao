@@ -17,11 +17,13 @@
         "@tanstack/react-router-devtools": "^1.131.5",
         "@tanstack/router-plugin": "^1.121.2",
         "@types/node": "^24.3.1",
+        "autoprefixer": "^10.4.21",
         "ffxiv-overlay-api": "^4.8.0",
         "jotai": "^2.14.0",
+        "postcss": "^8.5.6",
         "react": "19.1.1",
         "react-dom": "19.1.1",
-        "tailwindcss": "^4.1.13"
+        "tailwindcss": "3"
     },
     "devDependencies": {
         "@biomejs/biome": "2.2.2",
