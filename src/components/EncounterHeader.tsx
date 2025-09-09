@@ -33,7 +33,7 @@ export default function EncounterHeader({
 
 	return (
 		<header className="text-[#d0d0d0] text-sm flex flex-row items-center justify-between pt-0.5">
-			<div className="bg-[#d0d0d0] text-black rounded-[0.1875rem] px-0.5 text-xs">
+			<div className="bg-[#d0d0d0] text-black rounded-[0.1875rem] px-0.5 text-xs mt-1">
 				<PopoverProvider>
 					<PopoverDisclosure>YAO</PopoverDisclosure>
 					<Popover
