@@ -23,7 +23,7 @@ export default function EncounterView({
 				<ul className="flex flex-col text-base">
 					{combatants?.map((c) => {
 						return (
-							<li key={c.name}>
+							<li key={`${c.id}`}>
 								<div className="flex flex-row justify-between gap-1 -mb-[11px] z-10">
 									<span
 										className="ont-black text-outline shrink-0"
