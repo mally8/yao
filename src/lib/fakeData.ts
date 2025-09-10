@@ -1,8 +1,9 @@
 import type { JobType } from 'ffxiv-overlay-api/lib/types';
 import { useAtomValue } from 'jotai';
-import type {
-	ParsedCombatantType,
-	ParsedEncounterType,
+import {
+	generateId,
+	type ParsedCombatantType,
+	type ParsedEncounterType,
 } from '../stores/encounter';
 import { settingsStore } from '../stores/settings';
 import { getJobColor } from './encounterUtils';
@@ -29,6 +30,7 @@ const generateTestCombatantData = (
 	const jobColor = getJobColor(job, settings.combatantColors);
 
 	return {
+		id: generateId(),
 		name: name,
 		dps: dps,
 		totalDamage: damage,
