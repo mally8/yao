@@ -13,6 +13,7 @@ export type ParsedEncounterType = {
 };
 
 export type ParsedCombatantType = {
+	id: string;
 	name: string;
 	dps: number;
 	totalDamage: number;
@@ -94,6 +95,7 @@ export const parseCombatantsAtom = atom(
 			const jobColor = getJobColor(job, store.combatantColors);
 
 			return {
+				id: generateId(),
 				name: name.split(' ')[0] ?? 'YOU',
 				dps: dps,
 				totalDamage: damage,
@@ -109,3 +111,7 @@ export const parseCombatantsAtom = atom(
 		console.log('[STATE:COMBATANTS] Updated: ', parsedCombatants);
 	},
 );
+
+const generateId = (): string => {
+	return Math.random().toString(36).substring(2, 15);
+};
