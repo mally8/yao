@@ -24,10 +24,17 @@ export default function EncounterHeader({
 	const [settings, setSettings] = useAtom(settingsStore);
 	const [showFakeData, setShowFakeData] = useAtom(showFakeDataAtom);
 
-	const handleChange = (value: 'Role' | 'Class') => {
+	const handleColorsChange = (value: 'Role' | 'Class') => {
 		setSettings({
 			...settings,
 			combatantColors: value,
+		});
+	};
+
+	const handleMaxHitToggle = (bool: boolean) => {
+		setSettings({
+			...settings,
+			showMaxHit: bool,
 		});
 	};
 
@@ -48,7 +55,7 @@ export default function EncounterHeader({
 						<div className="flex flex-row justify-between gap-2 items-center">
 							<span>Colors:</span>
 							<SelectProvider
-								setValue={handleChange}
+								setValue={handleColorsChange}
 								value={settings.combatantColors}
 							>
 								<Select className="uppercase bg-text text-bg ps-1 pe-0.5 py-0.5 rounded-md flex flex-row items-center">
@@ -88,8 +95,13 @@ export default function EncounterHeader({
 							className="flex flex-row justify-between gap-2 items-center"
 							title="Doesn't work for now :3"
 						>
-							<span>Formatted Nums:</span>
-							<CheckboxC></CheckboxC>
+							<span>Show MaxHit:</span>
+							<CheckboxC
+								defaultChecked={settings.showMaxHit}
+								onChange={(e) => {
+									handleMaxHitToggle(e.target.checked);
+								}}
+							/>
 						</div>
 						<Separator
 							className="text-text/50 border-1 rounded-xs"

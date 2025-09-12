@@ -36,22 +36,24 @@ export default function EncounterView({
 									>
 										{c.name}
 									</span>
-									<span
-										className="font-bold text-xs flex flex-col z-10 overflow-hidden"
-										style={{
-											color: getJobColor(
-												c.job,
-												settings.combatantColors,
-											),
-										}}
-									>
-										<p className="text-outline text-[0.625rem] -mb-1.5 max-w-[12ch] truncate px-0.5">
-											{c.maxHit}
-										</p>
-										<p className="text-outline -mb-1">
-											{c.maxHitDamage}
-										</p>
-									</span>
+									{settings.showMaxHit && (
+										<span
+											className="font-bold text-xs flex flex-col z-10 overflow-hidden"
+											style={{
+												color: getJobColor(
+													c.job,
+													settings.combatantColors,
+												),
+											}}
+										>
+											<p className="text-outline text-[0.625rem] -mb-1.5 max-w-[12ch] truncate px-0.5">
+												{c.maxHit}
+											</p>
+											<p className="text-outline -mb-1">
+												{c.maxHitDamage}
+											</p>
+										</span>
+									)}
 									<span
 										className="font-black text-outline shrink-0 pe-0.5"
 										style={{
