@@ -46,12 +46,16 @@ export default function EncounterView({
 												),
 											}}
 										>
-											<p className="text-outline text-[0.625rem] -mb-1.5 max-w-[12ch] truncate px-0.5">
-												{c.maxHit}
-											</p>
-											<p className="text-outline -mb-1">
-												{c.maxHitDamage}
-											</p>
+											{c.maxHit !== '' && (
+												<>
+													<p className="text-outline text-[0.625rem] -mb-1.5 max-w-[12ch] truncate px-0.5">
+														{c.maxHit}
+													</p>
+													<p className="text-outline -mb-1">
+														{c.maxHitDamage}
+													</p>
+												</>
+											)}
 										</span>
 									)}
 									<span
